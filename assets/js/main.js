@@ -1,33 +1,33 @@
-//common side navbar call
+// //common side navbar call
 
-$(document).ready(function () {
-  $(".sidenav").sidenav();
-});
+// $(document).ready(function () {
+//   $(".sidenav").sidenav();
+// });
 
-//Get the top button
-var mybutton = document.getElementById("myBtn");
+// //Get the top button
+// var mybutton = document.getElementById("myBtn");
 
-if(mybutton) {
-  // When the user scrolls down 20px from the top of the document, show the button
-  window.onscroll = function () {
-    scrollFunction();
-  };
-  function scrollFunction() {
-    if (
-      document.body.scrollTop > 350 ||
-      document.documentElement.scrollTop > 350
-    ) {
-      mybutton.style.display = "block";
-    } else {
-      mybutton.style.display = "none";
-    }
-  }
-  // When the user clicks on the button, scroll to the top of the document
-  function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-}
+// if(mybutton) {
+//   // When the user scrolls down 20px from the top of the document, show the button
+//   window.onscroll = function () {
+//     scrollFunction();
+//   };
+//   function scrollFunction() {
+//     if (
+//       document.body.scrollTop > 350 ||
+//       document.documentElement.scrollTop > 350
+//     ) {
+//       mybutton.style.display = "block";
+//     } else {
+//       mybutton.style.display = "none";
+//     }
+//   }
+//   // When the user clicks on the button, scroll to the top of the document
+//   function topFunction() {
+//     document.body.scrollTop = 0;
+//     document.documentElement.scrollTop = 0;
+//   }
+// }
 
 //Footer and Navbar
 
@@ -157,6 +157,20 @@ let footer = $(`
 let bodyElement = $(`body`);
 bodyElement.prepend(header);
 bodyElement.append(footer);
+//toggler hamburger functions
+const menuBtn = document.querySelector('.navbar-toggler');
+let menuOpen = false;
+menuBtn.addEventListener('click', () => {
+  if(!menuOpen){
+    menuBtn.classList.add('open')
+    menuOpen = true;
+  }
+  else{
+    menuBtn.classList.remove('open');
+    menuOpen = false;
+  }
+});
+
 
 /*JavaScript for toggle for light/dark mode*/
 

@@ -6,11 +6,11 @@
 html[data-theme="light"] {
   --bg-mybtn: red;
   --bg-nav:black;
-  --bg-nav-img: black;
+  --bg-nav-img: rgb(14, 5, 5);
   --bg-footer:#DDE1EC;
-  --bg: #ffffff;
-  --text: #191919;
-  --text-color: #6c757d;
+  --bg: #000000;
+  --text: #f1eeee;
+  --text-color: #f2f5f7;
   --col-icon: black;
   --col-bd-radius:rgb(2, 2, 2);
   --col-box-shadow:#000000 2px 2px 4px, 
@@ -39,7 +39,7 @@ html[data-theme="dark"] {
   --bg-nav: #6617cb;
   --bg-nav-img: linear-gradient(315deg, #6617cb 0%, #882463 74%);
   --bg-footer:linear-gradient(315deg, #6617cb 0%, #882463 74%);
-  --bg: #191919;
+  --bg: #000000;
   --text: #ffffff;
   --text-color: #fff;
   --bg-txt-img: linear-gradient(315deg, #d5adc8 0%, #ff8489 74%);
@@ -118,7 +118,7 @@ html {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #fff;
+  background-color: rgb(0, 0, 0);
   height: 100%;
   width: 100%;
   display: flex;
@@ -206,9 +206,11 @@ html {
 }
 .navbar{
   color:#000000;
-  background-color: #fff;
+  background-color: rgb(0, 0, 0);
 }
-
+.navbar .collapse .navbar-nav a, .navbar-brand{
+    color: white;
+}
 /*
 -------------------------------------
     SIDEBAR SVG ANIMATION
@@ -301,7 +303,7 @@ html {
     
   }
   li.nav-item{
-
+    color: white;
     text-align: center;
   }
   a.nav-link{
@@ -324,7 +326,7 @@ html {
   height: 60px;
   cursor: pointer;
   transition: all .2s ease-in-out; 
-  border-color: white;
+  border-color: black;
   border: none;
   outline: none;
 }
@@ -731,6 +733,7 @@ form{
       .collapse navbar-collapse{
         display: flex;
         justify-content: center;
+        background-color: black;
       } 
 
       .footer{
